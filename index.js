@@ -9,7 +9,9 @@ const policyRoutes = require('./routes/policyRoutes');
 
 const port = 3001;
 
-app.use(cors());
+app.use(cors({
+  origin: '*'
+}));
 app.use(express.json())
 
 mongoose.connect("mongodb+srv://nickhacklf:670craft@james-webdb.x1r5f.mongodb.net/?retryWrites=true&w=majority&appName=James-WebDB")
