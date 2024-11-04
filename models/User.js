@@ -54,6 +54,15 @@ const UserSchema = new mongoose.Schema({
   company: CompanySchema,
   policy: [PolicyListSchema],
   history: [HistorySchema],
+  hasImage: {
+    type: Boolean,
+  },
+  verified:{
+    type: Boolean
+  },
+  admin:{
+    type: Boolean
+  }
 })
 
 var UserModel = mongoose.model('user', UserSchema)

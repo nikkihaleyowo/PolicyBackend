@@ -6,6 +6,7 @@ const cors = require('cors')
 
 const userRoutes = require('./routes/userRoutes');
 const policyRoutes = require('./routes/policyRoutes');
+const adminRoutes = require('./routes/adminRoutes');
 
 const port = 3001;
 
@@ -18,6 +19,7 @@ mongoose.connect("mongodb+srv://nickhacklf:670craft@james-webdb.x1r5f.mongodb.ne
 
 app.use('/api/users', userRoutes);
 app.use('/api/policy', policyRoutes)
+app.use('/api/admin', adminRoutes)
 
 
 //public endpoint
